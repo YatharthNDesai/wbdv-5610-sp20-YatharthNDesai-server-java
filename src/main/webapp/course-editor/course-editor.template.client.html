@@ -3,40 +3,80 @@
     <head>
         <meta charset="UTF-8">
         <title>Course Editor</title>
+        <link
+                href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                rel="stylesheet"
+        />
         <link href="course-editor.style.client.css"
               rel="stylesheet"/>
         <style>
-            
+
         </style>
     </head>
     <body>
-    <h1 >
-        Course Editor
-    </h1>
+    <div class="container-fluid">
+        <h1 >
+            Course Editor
+        </h1>
+        <div class="row">
+        <div class="col-4">
+            <h2 id="wbdv-module-list">Module List</h2>
 
-    <h2>Module List</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Module 1</li>
+                <li class="list-group-item active">Module 2</li>
+                <li class="list-group-item">Module 3</li>
+            </ul>
+        </div>
+        <div class="col-8">
+            <h2>Lessons</h2>
 
-    <ul>
-        <li>Module 1</li>
-        <li>Module 2</li>
-        <li>Module 3</li>
-    </ul>
-    <h2>Lessons</h2>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                    Lesson 1
+                </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                    Lesson 2
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="active nav-link" href="#">
+                    Lesson 3
+                    </a>
+                </li>
+            </ul>
+            <h3>Topics</h3>
 
-    <ul>
-        <li>Lesson 1</li>
-        <li>Lesson 2</li>
-        <li>Lesson 3</li>
-    </ul>
-        <h3>Topics</h3>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link " href="#">
+                    Topic 1
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">
+                        Topic 2
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        Topic 3
+                    </a>
+                </li>
+            </ul>
 
-        <ul>
-            <li>Topic 1</li>
-            <li>Topic 2</li>
-            <li>Topic 3</li>
-        </ul>
+        </div>
+        </div>
 
 
+    <span class="wbdv-bold">
+        Some text
+    </span>
 
+
+</div>
     </body>
 </html>
