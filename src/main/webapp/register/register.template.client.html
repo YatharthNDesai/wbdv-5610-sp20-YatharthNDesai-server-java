@@ -2,9 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Course Manager</title>
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
 </head>
 <body>
-$END$
+<div class="container">
+    <h1>
+        Sign Up
+    </h1>
+    <form>
+        <div class="form-group row">
+            <label for="username" class="col-sm-2 col-form-label ">
+                Username
+            </label>
+            <div class="col-sm-10">
+                <input type="text" id="username" class=" form-control wbdv-field wbdv-username"
+                       placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label ">
+                Password
+            </label>
+            <div class="col-sm-10">
+                <input type="password" id="password" class=" form-control wbdv-field wbdv-password"
+                       placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="verify-password" class="col-sm-2 col-form-label">
+                Verify Password
+            </label>
+            <div class="col-sm-10">
+                <input type="password" id="verify-password" class=" form-control wbdv-field wbdv-password-verify"
+                       placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">
+            </label>
+            <div class="col-sm">
+                <button class="button form-control btn btn-primary wbdv-button wbdv-register">
+                    Sign Up
+                </button>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="#" class="wbdv-link wbdv-login">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
 </body>
 </html>
