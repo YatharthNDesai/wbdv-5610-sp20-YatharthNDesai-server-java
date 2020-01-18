@@ -3,47 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Course Manager</title>
+    <!-- Booststrap has been used to give the page a consistent look-->
     <link
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             rel="stylesheet"
     />
-    </head>
-    <body>
-    <div class="container">
-        <h1>Sign In</h1>
+</head>
+<body>
+<div class="container">
+    <h1>Sign In</h1>
+    <!-- The sign in form begins here-->
     <form>
+        <!-- Username field-->
         <div class="form-group row">
             <label for="username" class="col-sm-2 col-form-label">
                 Username
             </label>
             <div class="col-sm-10">
-                <input type="text" id="username" class="form-control wbdv-field wbdv-username" placeholder="Username">
+                <input type="text" id="username" class="form-control wbdv-field wbdv-username"
+                       placeholder="Username">
             </div>
         </div>
+        <!-- Password field-->
         <div class="form-group row">
-            <label  class="col-sm-2 col-form-label">
+            <label class="col-sm-2 col-form-label">
                 Password
             </label>
             <div class="col-sm-10">
-                <input type="password" class="form-control wbdv-field wbdv-password" placeholder="Password">
+                <input type="password" class="form-control wbdv-field wbdv-password"
+                       placeholder="Password">
             </div>
         </div>
+        <!-- Sign in button-->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label"></label>
             <div class="col-sm-10">
-                <button onclick="window.location.href = 'http://localhost:8080/profile/profile.template.client.html';" class="btn btn-primary btn-block wbdv-login">Sign in</button>
+                <button type="button"
+                        onclick="window.location.href = '../profile/profile.template.client.html'"
+                        class="btn btn-primary btn-block wbdv-login">Sign in
+                </button>
+            </div>
+        </div>
+        <!-- Cancel button-->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <button type="button" onclick="window.location.href = '../index.html'"
+                        class="btn btn-danger form-control">
+                    Cancel
+                </button>
+
                 <div class="row">
+                    <!-- Forgot password link-->
                     <div class="col-6">
-                        <a href="profile.template.client.html" class="wbdv-link wbdv-forgot-password">Forgot Password?</a>
+                        <a href="#" class="wbdv-link wbdv-forgot-password">Forgot Password?</a>
                     </div>
+                    <!-- Sign Up link-->
                     <div class="col-6">
-                        <a href="#" class="float-right wbdv-link wbdv-register">Sign up</a>
+                        <a href="../register/register.template.client.html"
+                           class="float-right wbdv-link wbdv-register">Sign up</a>
                     </div>
                 </div>
             </div>
         </div>
 
     </form>
-    </div>
-    </body>
+</div>
+</body>
 </html>
