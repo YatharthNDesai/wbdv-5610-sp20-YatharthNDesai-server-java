@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
+    <!-- Booststrap has been used to give the page a consistent look-->
     <link
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             rel="stylesheet"
@@ -11,20 +12,24 @@
 <body>
 <div class="container">
     <h1>Profile</h1>
+    <!-- Profile page form begins here -->
     <form>
+        <!-- Static alert message-->
         <div class="form-group row">
         <label class="col-sm-2"></label>
         <div class = " alert alert-success wbdv-message col-sm-10" role="alert">
             Profile successfully saved
         </div>
         </div>
+        <!-- Username field-->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Username</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control wbdv-field wbdv-username"
+                <input readonly class="form-control wbdv-field wbdv-username"
                        placeholder="Username">
             </div>
         </div>
+        <!-- Password Field-->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-10">
@@ -32,18 +37,21 @@
                        placeholder="Password">
             </div>
         </div>
+        <!-- Phone field-->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Phone</label>
             <div class="col-sm-10">
                 <input type="number" class="form-control wbdv-field wbdv-phone" placeholder="Phone">
             </div>
         </div>
+        <!-- Email field-->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">
                 <input type="email" class="form-control wbdv-field wbdv-email" placeholder="example@something.com">
             </div>
         </div>
+        <!-- Role field-->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Role</label>
             <div class="col-sm-10">
@@ -60,24 +68,27 @@
                 </select>
             </div>
         </div>
+        <!-- Date of birth field-->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">Date of Birth</label>
             <div class="col-sm-10">
                 <input type="date" class="form-control wbdv-field wbdv-dob">
             </div>
         </div>
+        <!-- Update Button-->
         <div class ="form-group row">
             <label class="col-sm-2"></label>
             <div class="col-sm-10">
-            <button type="button" class="btn btn-success form-control">
+            <button type="button" class="btn btn-success form-control wbdv-button wbdv-update">
                 Update
             </button>
             </div>
         </div>
+        <!-- Logout button-->
         <div class = "form-group row">
             <label class="col-sm-2"></label>
             <div class="col-sm-10">
-                <button type="button" class="btn btn-danger form-control">
+                <button type="button" onclick="window.location.href='../index.html'" class="btn btn-danger form-control wbdv-button wbdv-logout">
                 Logout
             </button>
             </div>
