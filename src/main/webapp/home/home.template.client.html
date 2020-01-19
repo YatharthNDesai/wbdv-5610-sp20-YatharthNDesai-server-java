@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home Page </title>
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <link
+            href="home.style.client.css"
+            rel="stylesheet"
+    />
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<div>
+    <div class="fixed-action-btn">
+        <button class="btn btn-danger fab-container">
+            <i class="fa fa-plus"></i>
+        </button>
+    </div>
+    <!--   <nav>-->
+    <!--       <div class="my-nav">-->
+    <!--           <a class="navbar-brand" href="#">Course Editor</a>-->
+    <!--       </div>-->
+    <!--   </nav>-->
+
+
+    <nav class="navbar navbar-dark bg-primary row">
+
+        <button class="btn btn-primary col-1 " type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+
+
+        <div class="wbdv-course-manager col-3 ">
+            <!--                <h4>Course Manager</h4>-->
+<!--            <label>Course Manager</label>-->
+            <a class="navbar-brand" href="#">Course
+                Manager</a>
+        </div>
+        <div class="col-8 ">
+            <form class="form-inline">
+                <div style="width: 80%">
+                    <input class="form-control " style="width: 100%" type="search"
+                           placeholder="New Course Title" aria-label="Search">
+                </div>
+                <div style="width: 20%">
+                    <button class="btn btn-danger" type="submit">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </nav>
+</div>
+<div class="container ">
+
+    <table class="table table-hover">
+        <thead>
+        <tr class="my-head">
+            <th class="wbdv-header wbdv-title" scope="col">
+                Title
+            </th>
+            <th class="wbdv-header wbdv-owner"  scope="col">Owned by</th>
+            <th class="wbdv-header wbdv-last-modified" scope="col">Last Modified by</th>
+            <th scope="col">
+                <button class="btn" type="button">
+                    <i class="fa fa-th"></i>
+                </button>
+            </th>
+            <th scope="col">
+                <button class="btn" type="button">
+                    <i class="fa fa-sort-alpha-down"></i>
+                </button>
+            </th>
+        </tr>
+        </thead>
+
+    </table>
+
+
+
+                <h6>Today</h6>
+
+
+            <table class="table table-hover">
+                <tbody>
+            <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5500 Software Engineering Graduate</td>
+                <td class="wbdv-owner" >Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr>
+            <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5610 Web Dev Graduate</td>
+                <td class="wbdv-owner">Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr >
+            <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5200 Database Management System</td>
+                <td class="wbdv-owner">Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr>
+                </tbody>
+            </table>
+
+                    <h6>Yesterday</h6>
+    <table class="table table-hover">
+        <tbody>
+
+        <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5500 Software Engineering Graduate</td>
+                <td class="wbdv-owner" >Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr>
+            <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5610 Web Dev Graduate</td>
+                <td class="wbdv-owner">Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr>
+            <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5200 Database Management System</td>
+                <td class="wbdv-owner">Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-hover">
+        <tbody>
+
+                    <h6>Last 7 days</h6>
+
+            <table class="table table-hover">
+                <tbody>
+            <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5500 Software Engineering Graduate</td>
+                <td class="wbdv-owner" >Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr>
+            <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5610 Web Dev Graduate</td>
+                <td class="wbdv-owner">Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr>
+            <tr class="my-row">
+                <td class="wbdv-header wbdv-title">CS5200 Database Management System</td>
+                <td class="wbdv-owner">Me</td>
+                <td class="wbdv-last-modified">6:45pm</td>
+                <td></td>
+                <td>
+                    <button class="btn" type="button">
+                        <i>X</i>
+                    </button>
+                </td>
+            </tr>
+
+            </tbody>
+
+    </table>
+</div>
+
+
+</body>
+</html>

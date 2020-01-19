@@ -1,0 +1,56 @@
+
+    .my-brand{
+        font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: small;
+        color: white;
+
+    }
+    .my-table{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    body{
+        background-color: lightgray;
+    }
+@media screen and (max-width: 480px) {
+    .wbdv-last-modified {
+        width: 20%;
+        display: none;
+        align-content: center;
+    }
+
+    .wbdv-course-manager {
+        display: none;
+    }
+
+    .wbdv-owner {
+        display: none;
+        width: 20%;
+    }
+
+    .my-head {
+        display: none;
+    }
+
+    
+}
+
+    .day-row{
+        padding-top: 100px;
+    }
+    .fab-container{
+        position:fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .my-row{
+        background-color: white;
+    }
+
+    .wbdv-title{
+        width: 50%;
+    }
