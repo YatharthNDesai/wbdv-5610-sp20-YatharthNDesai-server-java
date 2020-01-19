@@ -17,7 +17,7 @@
     .wbdv-last-modified {
         width: 20%;
         display: none;
-        align-content: center;
+
     }
 
     .wbdv-course-manager {
@@ -25,8 +25,11 @@
     }
 
     .wbdv-owner {
-        display: none;
+       display: none;
         width: 20%;
+    }
+    .wbdv-empty{
+        display: none;
     }
 
     .my-head {
@@ -52,5 +55,15 @@
     }
 
     .wbdv-title{
-        width: 50%;
+        width: 40%;
+    }
+    .wbdv-delete{
+        width: 5%;
+    }
+
+    .wbdv-grid-layout{
+        width: 10%;
+    }
+    .wbdv-sort{
+        width: 10%;
     }
