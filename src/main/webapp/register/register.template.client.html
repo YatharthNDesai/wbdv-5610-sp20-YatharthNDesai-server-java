@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Course Manager</title>
+    <!-- Booststrap has been used to give the page a consistent look-->
     <link
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             rel="stylesheet"
@@ -13,7 +14,9 @@
     <h1>
         Sign Up
     </h1>
+    <!-- The Register form begins here-->
     <form>
+        <!-- Username field-->
         <div class="form-group row">
             <label for="username" class="col-sm-2 col-form-label ">
                 Username
@@ -23,6 +26,7 @@
                        placeholder="Username">
             </div>
         </div>
+        <!-- Password field -->
         <div class="form-group row">
             <label for="password" class="col-sm-2 col-form-label ">
                 Password
@@ -32,6 +36,7 @@
                        placeholder="Password">
             </div>
         </div>
+        <!-- Verify Password Field-->
         <div class="form-group row">
             <label for="verify-password" class="col-sm-2 col-form-label">
                 Verify Password
@@ -41,17 +46,28 @@
                        placeholder="Password">
             </div>
         </div>
+        <!--Register Button-->
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">
             </label>
             <div class="col-sm">
-                <button class="button form-control btn btn-primary wbdv-button wbdv-register">
+                <button type="button" onclick="window.location.href = '../profile/profile.template.client.html'" class="button form-control btn btn-primary wbdv-button wbdv-register">
                     Sign Up
                 </button>
-
+            </div>
+        </div>
+        <!-- Cancel Button-->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">
+            </label>
+            <div class="col-sm">
+                <button type="button" onclick="window.location.href='../index.html'" class="btn btn-danger form-control">
+                    Cancel
+                </button>
+                <!-- Login link-->
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="#" class="wbdv-link wbdv-login">
+                        <a href="../login/login.template.client.html" class="wbdv-link wbdv-login">
                             Login
                         </a>
                     </div>
