@@ -1,93 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Course Editor</title>
-        <link
-                href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-                rel="stylesheet"
-        />
-        <link href="course-editor.style.client.css"
-              type="text/css"
-              rel="stylesheet"/>
-        <link
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css"
-                rel="stylesheet"
-        />
-        <style>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Editor</title>
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <link href="course-editor.style.client.css"
+          type="text/css"
+          rel="stylesheet"/>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css"
+            rel="stylesheet"
+    />
+    <style>
 
-        </style>
-    </head>
-    <body>
-    <div >
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    </style>
+</head>
+<body>
+<div class="fixed-action-btn">
+    <button class="btn btn-danger fab-container">
+        <i class="fa fa-plus"></i>
+    </button>
+</div>
+<div >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-            <button class="btn " style="color: gray()">
-                <i style="color: white">X</i>
-            </button>
-            <div style="width: 5%"></div>
-            <a class="navbar-brand" href="#">CS5610-WebDev</a>
-<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                <span class="navbar-toggler-icon"></span>-->
-<!--            </button>-->
+        <button class="btn wbdv-course-editor wbdv-close" style="color: gray()">
+            <label style="color: white">X</label>
+        </button>
+        <div style="width: 5%"></div>
+        <a class="navbar-brand wbdv-course-title" href="#">CS5610-WebDev</a>
+        <!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+        <!--                <span class="navbar-toggler-icon"></span>-->
+        <!--            </button>-->
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Build <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Theme</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Store</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Apps</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Settings</a>
-                    </li>
-                </ul>
-                <form class="form-inline ">
-                    <button class="btn  my-2 my-sm-0" type="submit" style="color: gray()">
-                        <i class="fa fa-plus" style="color: white"></i>
-                    </button>
-                </form>
-            </div>
-        </nav>
-        <div class="row" >
-        <div class="col-4 container-fluid wbdv-module-list" style="height: 100vh">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Build <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Theme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Apps</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+            </ul>
+            <form class="form-inline ">
+                <button class="btn  my-2 my-sm-0 wbdv-new-page-btn" type="submit" style="color: gray()">
+                    <i class="fa fa-plus" style="color: white"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+    <div class="row container-fluid">
+        <div class="col-3 container-fluid wbdv-module-list" style="height: 92vh">
             <button type="button" class="btn btn-secondary  m-4 container-fluid wbdv-module-item">
-                Module 1 - JQuery
+               <label class="wbdv-module-item-title" >Module 1 - JQuery
+            </label>
+                <a class="wbdv-module-item-delete-btn" href="#" style="float: right; color: white">
+                    X
+                </a>
             </button>
 
             <button type="button" class="btn btn-secondary m-4 container-fluid wbdv-module-item">
-                Module 1 - JQuery
+                <label class="wbdv-module-item-title" >Module 2 - React</label>
+                <a class="wbdv-module-item-delete-btn" href="#" style="float: right; color: white">
+                    X
+                </a>
             </button>
             <button type="button" class="btn btn-secondary m-4 container-fluid wbdv-module-item">
-                Module 1 - JQuery
+                <label class="wbdv-module-item-title" >Module 3 - REDUX</label>
+                <a class="wbdv-module-item-delete-btn" href="#" style="float: right; color: white">
+                    X
+                </a>
             </button>
             <button type="button" class="btn btn-secondary m-4 container-fluid wbdv-module-item">
-                Module 1 - JQuery
+                <label class="wbdv-module-item-title" >Module 4 - Native</label>
+                <a class="wbdv-module-item-delete-btn" href="#" style="float: right; color: white">
+                    X
+                </a>
             </button>
             <button type="button" class="btn btn-secondary m-4 container-fluid wbdv-module-item">
-                Module 1 - JQuery
+                <label class="wbdv-module-item-title" >Module 5 - Angular</label>
+                <a class="wbdv-module-item-delete-btn" href="#" style="float: right; color: white">
+                    X
+                </a>
             </button>
             <button type="button" class="btn btn-secondary m-4 container-fluid wbdv-module-item">
-                Module 1 - JQuery
+                <label class="wbdv-module-item-title" >Module 6 - Node</label>
+                <a class="wbdv-module-item-delete-btn" href="#" style="float: right; color: white">
+                    X
+                </a>
             </button>
-            <button type="button" class="btn m-4 container-fluid wbdv-module-item" style="align-items: end ; color:gray();">
+            <button type="button" class="btn btn-secondary m-4 container-fluid wbdv-module-item">
+                <label class="wbdv-module-item-title" >Module 7 - MongoDB</label>
+                <a class="wbdv-module-item-delete-btn" href="#" style="float: right; color: white">
+                    X
+                </a>
+            </button>
+            <button type="button" class="btn m-4 container-fluid wbdv-module-item-add-btn"
+                    style=" color:gray();">
                 <i class="fa fa-plus" style="color: white"></i>
             </button>
         </div>
-        <div class="col-8">
-            <div>
-                <button type="button" class="btn btn-secondary  m-3 container-fluid wbdv-topic-pill">
+        <div class="col-9">
+            <div class="wbdv-topic-pill-list">
+                <button type="button"
+                        class="btn btn-secondary  m-3 container-fluid wbdv-topic-pill">
                     Topic 1
                 </button>
 
@@ -100,7 +132,8 @@
                 <button type="button" class="btn btn-secondary m-3 container-fluid wbdv-topic-pill">
                     Topic 4
                 </button>
-                <button type="button" class="btn btn-secondary m-3 container-fluid " style="width: 50px" >
+                <button type="button" class="btn btn-secondary m-3 container-fluid wbdv-topic-add-btn"
+                        style="width: 50px">
                     <i class="fa fa-plus"></i>
                 </button>
             </div>
@@ -117,152 +150,150 @@
                 </button>
 
 
-
             </div>
-            <div class="p-2">
-                <form style="border: black">
+            <div class="p-4">
+                <form class="container-fluid"  style=" border: gray;border: solid;">
                     <div>
-                        <h1> Heading Widget
+                        <div class="row">
+                            <div class="col-6">
+                            <h3> Heading Widget</h3>
+                            </div>
+                            <div class="col-6">
                             <button type="button" class="btn btn-danger m-1" style="float: right; ">
-                                <i ]> X</i>
+                                <i > X</i>
                             </button>
-<!--                            <select style="float: right; size: 20px"  >-->
-<!--                                <option>-->
-<!--                                    Heading 1-->
-<!--                                </option>-->
-<!--                            </select>-->
-                            <button type="button" class="btn btn-warning m-1" style="float: right; ">
+                                                        <select style="float: right;" class="m-1"  >
+                                                            <option>
+                                                                Heading 1
+                                                            </option>
+                                                        </select>
+                            <button type="button" class="btn btn-warning m-1"
+                                    style="float: right; ">
                                 <i class="fa fa-arrow-down"></i>
                             </button>
-                            <button type="button" class="btn btn-warning m-1" style="float: right; ">
+                            <button type="button" class="btn btn-warning m-1"
+                                    style="float: right; ">
                                 <i class="fa fa-arrow-up"></i>
                             </button>
-                        </h1>
+                            </div>
+                        </div>
                         <div class="form-group">
 
-                                <input class="form-control " type="text" placeholder="Heading text"/>
+                            <input class="form-control " type="text" placeholder="Heading text"/>
 
                         </div>
                         <div class="form-group">
 
-                                <select class="form-control">
-                                    <option>
+                            <select class="form-control">
+                                <option>
                                     Header 1
-                                    </option>
-                                </select>
+                                </option>
+                            </select>
 
                         </div>
-                        <div class="form-grouo">
+                        <div class="form-group">
 
-                                <input class="form-control" type="text" placeholder="Widget name"/>
+                            <input class="form-control" type="text" placeholder="Widget name"/>
 
                         </div>
 
                     </div>
 
-                    <h3> Preview</h3>
-                    <h1>Heading text</h1>
+                    <h4> Preview</h4>
+                    <h3>Heading text</h3>
 
-<!--                    <div class="form-group">-->
-<!--                        <label for="exampleInputEmail1">Email address</label>-->
-<!--                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
-<!--                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
-<!--                    </div>-->
-<!--                    <div class="form-group">-->
-<!--                        <label for="exampleInputPassword1">Password</label>-->
-<!--                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
-<!--                    </div>-->
-<!--                    <div class="form-check">-->
-<!--                        <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
-<!--                        <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
-<!--                    </div>-->
-<!--                    <button type="submit" class="btn btn-primary">Submit</button>-->
+                    <!--                    <div class="form-group">-->
+                    <!--                        <label for="exampleInputEmail1">Email address</label>-->
+                    <!--                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
+                    <!--                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="form-group">-->
+                    <!--                        <label for="exampleInputPassword1">Password</label>-->
+                    <!--                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+                    <!--                    </div>-->
+                    <!--                    <div class="form-check">-->
+                    <!--                        <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+                    <!--                        <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+                    <!--                    </div>-->
+                    <!--                    <button type="submit" class="btn btn-primary">Submit</button>-->
                 </form>
             </div>
 
 
+            <!--            <ul class="nav nav-tabs">-->
+            <!--                <li class="nav-item">-->
+            <!--                    <a class="nav-link" href="#">-->
+            <!--                    Lesson 1-->
+            <!--                </a>-->
+            <!--                </li>-->
+            <!--                <li class="nav-item">-->
+            <!--                    <a class="nav-link" href="#">-->
+            <!--                    Lesson 2-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li class="nav-item ">-->
+            <!--                    <a class="active nav-link" href="#">-->
+            <!--                    Lesson 3-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--            </ul>-->
+            <!--            <h3>Topics</h3>-->
 
-<!--            <ul class="nav nav-tabs">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">-->
-<!--                    Lesson 1-->
-<!--                </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#">-->
-<!--                    Lesson 2-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item ">-->
-<!--                    <a class="active nav-link" href="#">-->
-<!--                    Lesson 3-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--            <h3>Topics</h3>-->
+            <!--            <ul class="nav nav-pills">-->
+            <!--                <li class="nav-item">-->
+            <!--                    <a class="nav-link " href="#">-->
+            <!--                    Topic 1-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li class="nav-item">-->
+            <!--                    <a class="nav-link " href="#">-->
+            <!--                        Topic 2-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li class="nav-item">-->
+            <!--                    <a class="nav-link active" href="#">-->
+            <!--                        Topic 3-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--            </ul>-->
 
-<!--            <ul class="nav nav-pills">-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link " href="#">-->
-<!--                    Topic 1-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link " href="#">-->
-<!--                        Topic 2-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link active" href="#">-->
-<!--                        Topic 3-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--            </ul>-->
+            <!--            <div class="btn-group wbdv-topic-pill-list row">-->
+            <!--            <button type="button" class="btn btn-secondary  m-3 container-fluid wbdv-topic-pill">-->
+            <!--                Topic 1-->
+            <!--            </button>-->
 
-<!--            <div class="btn-group wbdv-topic-pill-list row">-->
-<!--            <button type="button" class="btn btn-secondary  m-3 container-fluid wbdv-topic-pill">-->
-<!--                Topic 1-->
-<!--            </button>-->
+            <!--            <button type="button" class="btn btn-secondary m-3 container-fluid wbdv-topic-pill">-->
+            <!--                Topic 2-->
+            <!--            </button>-->
+            <!--            <button type="button" class="btn btn-secondary m-3 container-fluid wbdv-topic-pill">-->
+            <!--                Topic 3-->
+            <!--            </button>-->
+            <!--            <button type="button" class="btn btn-secondary m-3 container-fluid wbdv-topic-pill">-->
+            <!--                Topic 4-->
+            <!--            </button>-->
+            <!--                <button type="button" class="btn btn-secondary m-3 container-fluid " style="width: 50px" >-->
+            <!--                    <i class="fa fa-plus"></i>-->
+            <!--                </button>-->
+            <!--            </div>-->
+            <!--            <div class="m-3 row-1" style="float:right;">-->
+            <!--                <button type="button" class="btn btn-success">-->
+            <!--                    Save-->
+            <!--                </button>-->
+            <!--                <label style="font-weight: bolder">-->
+            <!--                    Preview-->
+            <!--                </label>-->
+            <!--                <label class="switch m-3">-->
+            <!--                    <input type="checkbox">-->
+            <!--                    <span class="slider round"></span>-->
+            <!--                </label>-->
 
-<!--            <button type="button" class="btn btn-secondary m-3 container-fluid wbdv-topic-pill">-->
-<!--                Topic 2-->
-<!--            </button>-->
-<!--            <button type="button" class="btn btn-secondary m-3 container-fluid wbdv-topic-pill">-->
-<!--                Topic 3-->
-<!--            </button>-->
-<!--            <button type="button" class="btn btn-secondary m-3 container-fluid wbdv-topic-pill">-->
-<!--                Topic 4-->
-<!--            </button>-->
-<!--                <button type="button" class="btn btn-secondary m-3 container-fluid " style="width: 50px" >-->
-<!--                    <i class="fa fa-plus"></i>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--            <div class="m-3 row-1" style="float:right;">-->
-<!--                <button type="button" class="btn btn-success">-->
-<!--                    Save-->
-<!--                </button>-->
-<!--                <label style="font-weight: bolder">-->
-<!--                    Preview-->
-<!--                </label>-->
-<!--                <label class="switch m-3">-->
-<!--                    <input type="checkbox">-->
-<!--                    <span class="slider round"></span>-->
-<!--                </label>-->
-
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <h1>Heading Widget</h1>-->
-<!--            </div>-->
+            <!--            </div>-->
+            <!--            <div class="row">-->
+            <!--                <h1>Heading Widget</h1>-->
+            <!--            </div>-->
 
         </div>
-        </div>
-
-
-    <span class="wbdv-bold">
-        Some text
-    </span>
-
-
+    </div>
 </div>
-    </body>
+</body>
 </html>

@@ -38,6 +38,14 @@ h2{
     height: 34px;
 }
 
+.fab-container{
+    position:fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+    cursor: pointer;
+}
+
 /* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
