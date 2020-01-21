@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Home Page </title>
+    <!-- Bootstrap and fontawesome has been used to give the page a consistent look-->
     <link
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             rel="stylesheet"
@@ -19,46 +20,38 @@
 </head>
 <body>
 <div class="container-fluid">
+    <!-- Floating button-->
     <div class="fixed-action-btn">
         <button class="btn btn-danger fab-container">
             <i class="fa fa-plus"></i>
         </button>
     </div>
-    <!--   <nav>-->
-    <!--       <div class="my-nav">-->
-    <!--           <a class="navbar-brand" href="#">Course Editor</a>-->
-    <!--       </div>-->
-    <!--   </nav>-->
-
-
+    <!-- Navbar for the page-->
     <nav class="navbar navbar-dark bg-primary row">
-
-        <button class="btn btn-primary col-1 col-md-1" type="button" data-toggle="collapse"
+        <!-- Hamburger button-->
+        <button class="btn wbdv-field wbdv-hamburger btn-primary col-1 col-md-1" type="button" data-toggle="collapse"
                 data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
                 aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars"></i>
         </button>
-
-
+        <!-- Page header-->
         <div class="wbdv-course-manager col-0 col-md-3 ">
-            <!--                <h4>Course Manager</h4>-->
-<!--            <label>Course Manager</label>-->
-            <a class="navbar-brand" href="#">Course
+            <a class="navbar-brand wbdv-label wbdv-course-manager" href="#">Course
                 Manager</a>
         </div>
         <div class="col-11 col-md-8">
             <form class="form-inline">
+                <!-- new course field-->
                 <div style="width: 80%">
-                    <input class="form-control " style="width: 100%" type="search"
+                    <input class="form-control wbdv-field wbdv-new-course" style="width: 100%" type="search"
                            placeholder="New Course Title" aria-label="Search">
                 </div>
+                <!-- new course button-->
                 <div style="width: 20%" class="p-2">
-                    <button class="btn btn-danger" type="submit">
+                    <button class="btn btn-danger wbdv-button wbdv-add-course" type="submit">
                         <i class="fa fa-plus"></i>
                     </button>
                 </div>
-
-
             </form>
         </div>
 
@@ -66,20 +59,31 @@
     </nav>
 </div>
 <div class="container ">
-
+    <!-- Header table-->
     <table class="table table-hover">
         <thead>
         <tr class="my-head">
+            <!-- Title header-->
             <th class="wbdv-header wbdv-title" scope="col">
                 Title
             </th>
+            <!-- Owner header-->
             <th class="wbdv-header wbdv-owner"  scope="col">Owned by</th>
+            <!-- Last modified header-->
             <th class="wbdv-header wbdv-last-modified" scope="col">Last Modified by</th>
+            <!-- Grid layout button-->
             <th class="wbdv-button wbdv-grid-layout" scope="col">
-                <button class="btn" type="button">
+                <button class="btn " type="button">
                     <i class="fa fa-th"></i>
                 </button>
             </th>
+            <!-- List layout button -->
+            <th class="wbdv-button wbdv-list-layout" scope="col">
+                <button class="btn " type="button">
+                    <i class="fa fa-columns"></i>
+                </button>
+            </th>
+            <!-- Sort button-->
             <th class="wbdv-header wbdv-sort" scope="col">
                 <button class="btn" type="button">
                     <i class="fa fa-sort-alpha-down"></i>
@@ -89,20 +93,16 @@
         </thead>
 
     </table>
-
-
-
                 <h6>Today</h6>
-
-
+    <!-- Content table-->
             <table class="table table-hover">
                 <tbody>
             <tr class="my-row">
-                <td class="wbdv-header wbdv-title">
-                    <i class="fas fa-file"></i>
-                    CS5500 Software Engineering Graduate</td>
-                <td class="wbdv-owner" >Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-title">
+                    <i class="fas fa-file wbdv-row wbdv-icon"></i>
+                        CS5500 Software Engineering Graduate</td>
+                <td class="wbdv-row wbdv-owner" >Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
                 <td class="wbdv-empty"></td>
                 <td class="wbdv-row wbdv-button wbdv-delete">
                     <button class="btn" type="button">
@@ -111,12 +111,12 @@
                 </td>
             </tr>
             <tr class="my-row"  onclick=window.location="/course-editor/course-editor.template.client.html">
-                <td class="wbdv-header wbdv-title">
+                <td class="wbdv-row wbdv-title">
                     <i class="fas fa-file"></i>
                     CS5610 Web Dev Graduate</td>
-                <td class="wbdv-owner">Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
-                <td class="wbdv-empty"></td>
+                <td class="wbdv-row wbdv-owner">Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-empty"></td>
                 <td class="wbdv-row wbdv-button wbdv-delete">
                     <button class="btn" type="button">
                         <i>X</i>
@@ -124,11 +124,11 @@
                 </td>
             </tr >
             <tr class="my-row">
-                <td class="wbdv-header wbdv-title">
+                <td class="wbdv-row wbdv-title">
                     <i class="fas fa-file"></i>
                     CS5200 Database Management System</td>
-                <td class="wbdv-owner">Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-owner">Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
                 <td class="wbdv-empty"></td>
                 <td class="wbdv-row wbdv-button wbdv-delete">
                     <button class="btn" type="button">
@@ -142,13 +142,12 @@
                     <h6>Yesterday</h6>
     <table class="table table-hover">
         <tbody>
-
         <tr class="my-row">
-                <td class="wbdv-header wbdv-title">
+                <td class="wbdv-row wbdv-title">
                     <i class="fas fa-file"></i>
                     CS5500 Software Engineering Graduate</td>
-                <td class="wbdv-owner" >Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-owner" >Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
                 <td class="wbdv-empty"></td>
                 <td class="wbdv-row wbdv-button wbdv-delete">
                     <button class="btn" type="button">
@@ -157,11 +156,11 @@
                 </td>
             </tr>
             <tr class="my-row">
-                <td class="wbdv-header wbdv-title">
+                <td class="wbdv-row wbdv-title">
                     <i class="fas fa-file"></i>
                     CS5610 Web Dev Graduate</td>
-                <td class="wbdv-owner">Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-owner">Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
                 <td class="wbdv-empty"></td>
                 <td class="wbdv-row wbdv-button wbdv-delete">
                     <button class="btn" type="button">
@@ -170,11 +169,11 @@
                 </td>
             </tr>
             <tr class="my-row">
-                <td class="wbdv-header wbdv-title">
+                <td class="wbdv-row wbdv-title">
                     <i class="fas fa-file"></i>
                     CS5200 Database Management System</td>
-                <td class="wbdv-owner">Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-owner">Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
                 <td class="wbdv-empty"></td>
                 <td class="wbdv-row wbdv-button wbdv-delete">
                     <button class="btn" type="button">
@@ -184,17 +183,15 @@
             </tr>
         </tbody>
     </table>
-
                     <h6>Last 7 days</h6>
-
             <table class="table table-hover">
                 <tbody>
             <tr class="my-row">
-                <td class="wbdv-header wbdv-title">
+                <td class="wbdv-row wbdv-title">
                     <i class="fas fa-file"></i>
                     CS5500 Software Engineering Graduate</td>
-                <td class="wbdv-owner" >Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-owner" >Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
                 <td class="wbdv-empty"></td>
                 <td class="wbdv-row wbdv-button wbdv-delete">
                     <button class="btn" type="button">
@@ -203,11 +200,11 @@
                 </td>
             </tr>
             <tr class="my-row">
-                <td class="wbdv-header wbdv-title">
+                <td class="wbdv-row wbdv-title">
                     <i class="fas fa-file"></i>
                     CS5610 Web Dev Graduate</td>
-                <td class="wbdv-owner">Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-owner">Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
                 <td class="wbdv-empty"></td>
                 <td>
                     <button class="btn" type="button">
@@ -216,11 +213,11 @@
                 </td>
             </tr>
             <tr class="my-row">
-                <td class="wbdv-header wbdv-title">
+                <td class="wbdv-row wbdv-title">
                     <i class="fas fa-file"></i>
                     CS5200 Database Management System</td>
-                <td class="wbdv-owner">Me</td>
-                <td class="wbdv-last-modified">6:45pm</td>
+                <td class="wbdv-row wbdv-owner">Me</td>
+                <td class="wbdv-row wbdv-last-modified">6:45pm</td>
                 <td class="wbdv-empty"></td>
                 <td class="wbdv-row wbdv-button wbdv-delete">
                     <button class="btn" type="button">
@@ -228,12 +225,8 @@
                     </button>
                 </td>
             </tr>
-
             </tbody>
-
     </table>
 </div>
-
-
 </body>
 </html>

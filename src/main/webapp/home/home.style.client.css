@@ -13,9 +13,15 @@
     body{
         background-color: lightgray;
     }
+    .wbdv-owner{
+        width: 18.32%;
+    }
+    .wbdv-last-modified{
+        width: 18.32%;
+    }
 @media screen and (max-width: 480px) {
     .wbdv-last-modified {
-        width: 20%;
+        width: 10%;
         display: none;
 
     }
@@ -30,6 +36,7 @@
     }
     .wbdv-empty{
         display: none;
+        width: 15%;
     }
 
     .my-head {
@@ -56,10 +63,10 @@
     }
 
     .wbdv-title{
-        width: 40%;
+        width: 33.75%;
     }
     .wbdv-delete{
-        width: 5%;
+        width: 10%;
     }
 
     .wbdv-grid-layout{
@@ -67,4 +74,10 @@
     }
     .wbdv-sort{
         width: 10%;
+    }
+    .wbdv-list-layout{
+        width: 10%;
+    }
+    .wbdv-empty{
+        width: 19.25%;
     }
