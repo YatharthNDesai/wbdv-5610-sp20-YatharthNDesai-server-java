@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Manager</title>
+    <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<h1>User Admin</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Role</th>
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="wbdv-form">
+        <td>
+            <input id="usernameFld" class="form-control" placeholder="Username">
+        </td>
+        <td>
+            <input id="passwordFld" class="form-control" placeholder="Password">
+        </td>
+        <td>
+            <input id="firstNameFld" class="form-control" placeholder="First name">
+        </td>
+        <td>
+            <input id="lastNameFld" class="form-control" placeholder="Last name">
+        </td>
+        <td>
+            <select id="roleFld">
+                <option>FACULTY</option>
+                <option>STUDENT</option>
+                <option>ADMIN</option>
+            </select>
+        </td>
+        <td>
+            <button>
+                <i class="fa fa-search wbdv-search"></i></button>
+            <button><i class="fa fa-plus wbdv-create"></i></button>
+            <button><i class="fa fa-check wbdv-update"></i></button>
+        </td>
+    </tr>
+    <tr class="wbdv-template wbdv-user wbdv-hidden">
+        <td class="wbdv-username">ada</td>
+        <td>&nbsp;</td>
+        <td class="wbdv-first-name">Ada</td>
+        <td class="wbdv-last-name">Lovelace</td>
+        <td class="wbdv-role">FACULTY</td>
+        <td class="wbdv-actions">
+        <span class="float-right">
+          <i id="wbdv-remove" class="fa-2x fa fa-times wbdv-remove"></i>
+          <i id="wbdv-edit" class="fa-2x fa fa-pencil wbdv-edit"></i>
+        </span>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+<script
+        src="http://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script
+    src="user-admin.controller.client.js">
+</script>
+</body>
+</html>
