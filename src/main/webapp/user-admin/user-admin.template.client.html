@@ -13,6 +13,7 @@
     />
 </head>
 <body>
+<div class="container-fluid">
 <h1>User Admin</h1>
 <table class="table">
     <thead>
@@ -49,11 +50,13 @@
         <td>
             <button>
                 <i class="fa fa-search wbdv-search"></i></button>
-            <button><i class="fa fa-plus wbdv-create"></i></button>
+            <button id="wbdv-search-btn"><i class="fa fa-plus wbdv-create"></i></button>
             <button><i class="fa fa-check wbdv-update"></i></button>
         </td>
     </tr>
-    <tr class="wbdv-template wbdv-user wbdv-hidden">
+    </tbody>
+    <tbody id="wbdv-table">
+    <tr id="template-row" class="wbdv-template wbdv-user wbdv-hidden" style="display: none">
         <td class="wbdv-username">ada</td>
         <td>&nbsp;</td>
         <td class="wbdv-first-name">Ada</td>
@@ -61,8 +64,10 @@
         <td class="wbdv-role">FACULTY</td>
         <td class="wbdv-actions">
         <span class="float-right">
-          <i id="wbdv-remove" class="fa-2x fa fa-times wbdv-remove"></i>
-          <i id="wbdv-edit" class="fa-2x fa fa-pencil wbdv-edit"></i>
+            <button class="wbdv-remove-btn">
+                <i id="wbdv-remove" class="fa fa-times wbdv-remove"></i></button>
+            <button>
+                <i id="wbdv-edit" class="fa fa-pen wbdv-edit"></i></button>
         </span>
         </td>
     </tr>
@@ -76,5 +81,6 @@
 <script
     src="user-admin.controller.client.js">
 </script>
+</div>
 </body>
 </html>
