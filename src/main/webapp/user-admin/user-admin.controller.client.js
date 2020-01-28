@@ -18,14 +18,7 @@ let userService
 // userList.push(user2)
 // console.log(userList)
 main = () => {
-    let user = new AdminUserServiceClient()
-    userService = user
-    userService
-        .findAllUsers()
-        .then(theusers => {
-            userList = theusers
-            renderUsers()
-        })
+
 
     // bind DOM elements to local variables
     $createBtn = $("#wbdv-create-btn");
@@ -38,11 +31,20 @@ main = () => {
     $roleFLD = $("#roleFld");
     $templateRow = $("#template-row");
     $tableBody = $("#wbdv-table");
-    $createBtn.click(createUser);
+
+    let user = new AdminUserServiceClient()
+    userService = user
+    userService
+        .findAllUsers()
+        .then(theusers => {
+            userList = theusers
+
+            renderUsers()
+        })
 
     // bind buttons to event handlers
-    // $createBtn.click(createUser);
-    // $updateBtn.click(updateUser())
+    $createBtn.click(createUser);
+    $updateBtn.click(updateUser)
 
 }
 
@@ -109,7 +111,7 @@ const createUser = () => {
                                       }
     )
 }
-let currentUser = 1
+let currentUser = -1
 
 const editUser = (index) => {
     let user = userList[index]
@@ -128,6 +130,7 @@ const editUser = (index) => {
 }
 
 const updateUser = () => {
+    console.log("Update pressed")
 
     const updatedUser = {
         username: $usernameFLD.val(),
@@ -145,15 +148,15 @@ const updateUser = () => {
     $lastNameFLD.val("")
 
     $roleFLD.val("")
-    console.log(userList[currentUser] + "Update")
-    // updatedUser._id = userList[currentUser]._id
+    // console.log(userList[currentUser] + "Update")
+    updatedUser._id = userList[currentUser]._id
     console.log(updatedUser._id)
     // updatedUser._id = user._id
 
-    // userService.updateUser(updatedUser._id, updatedUser)
-    //     .then((actualUser) => {
-    //         findAllUsers()
-    //     })
+    userService.updateUser(updatedUser._id, updatedUser)
+        .then((actualUser) => {
+            findAllUsers()
+        })
 }
 
 const deleteUser = (index) => {
