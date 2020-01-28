@@ -1,4 +1,3 @@
-
 let $usernameFLD
 let $passwordFLD
 let $createBtn
@@ -12,13 +11,7 @@ let userList = []
 let $deleteBtn
 let $editBtn
 let userService
-
-// let userList = []
-// userList.push(user1)
-// userList.push(user2)
-// console.log(userList)
 main = () => {
-
 
     // bind DOM elements to local variables
     $createBtn = $("#wbdv-create-btn");
@@ -60,6 +53,11 @@ function findAllUsers() {
         })
 }
 
+const renderUser = () => {
+    let index = userList.length - 1
+    editUser(index)
+}
+
 function renderUsers() {
     console.log(userList[currentUser] + "Render")
     $table.empty()
@@ -81,7 +79,6 @@ function renderUsers() {
         $btn.append($editBtn)
         $row.append($btn)
         $table.append($row)
-        // $updateBtn.click(updateUser());
     }
 }
 
@@ -148,11 +145,8 @@ const updateUser = () => {
     $lastNameFLD.val("")
 
     $roleFLD.val("")
-    // console.log(userList[currentUser] + "Update")
     updatedUser._id = userList[currentUser]._id
     console.log(updatedUser._id)
-    // updatedUser._id = user._id
-
     userService.updateUser(updatedUser._id, updatedUser)
         .then((actualUser) => {
             findAllUsers()
@@ -161,8 +155,6 @@ const updateUser = () => {
 
 const deleteUser = (index) => {
     console.log(userList[currentUser] + "Delete")
-    // console.log(index);
-
     let user = userList[index]
     const _id = user._id
     console.log(_id)
