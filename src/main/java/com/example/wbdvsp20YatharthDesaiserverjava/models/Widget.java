@@ -1,13 +1,21 @@
 package com.example.wbdvsp20YatharthDesaiserverjava.models;
 
-public class Widget {
+public class Widget implements Comparable<Widget> {
   private String id;
   private String title;
   private String topicId;
   private String type = "HEADING";
   private int size = 2;
   private String paragraph;
-  int order;
+  Integer order;
+
+  public Integer getOrder() {
+    return order;
+  }
+
+  public void setOrder(int order) {
+    this.order = order;
+  }
 
   public String getParagraph() {
     return paragraph;
@@ -63,5 +71,10 @@ public class Widget {
 
   public void setTitle(String title) {
     this.title = title;
+  }
+
+  @Override
+  public int compareTo(Widget widget) {
+    return this.getOrder().compareTo(widget.getOrder());
   }
 }
