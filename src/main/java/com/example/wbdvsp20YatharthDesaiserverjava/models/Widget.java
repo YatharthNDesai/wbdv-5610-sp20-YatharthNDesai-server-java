@@ -7,6 +7,7 @@ public class Widget {
   private String type = "HEADING";
   private int size = 2;
   private String paragraph;
+  int order;
 
   public String getParagraph() {
     return paragraph;
