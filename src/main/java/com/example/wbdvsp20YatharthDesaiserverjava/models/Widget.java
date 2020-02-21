@@ -5,6 +5,24 @@ public class Widget {
   private String title;
   private String topicId;
   private String type = "HEADING";
+  private int size = 2;
+  private String paragraph;
+
+  public String getParagraph() {
+    return paragraph;
+  }
+
+  public void setParagraph(String paragraph) {
+    this.paragraph = paragraph;
+  }
+
+  public int getSize() {
+    return size;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
 
   public String getType() {
     return type;

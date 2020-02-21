@@ -11,12 +11,15 @@ public class WidgetService {
 
   {
     Widget w1 = new Widget("123","Widget 1");
-    w1.setTopicId("X9HxiEwdCOTAbLbL");
+    w1.setTopicId("cC84CVcTG2bhvuva");
+    w1.setSize(1);
     Widget w2 = new Widget("234","Widget 2");
-    w2.setTopicId("X9HxiEwdCOTAbLbL");
+    w2.setTopicId("cC84CVcTG2bhvuva");
+    w2.setSize(3);
     w2.setType("PARAGRAPH");
     Widget w3 = new Widget("345","Widget 3");
-    w3.setTopicId("X9HxiEwdCOTAbLbL");
+    w3.setSize(5);
+    w3.setTopicId("cC84CVcTG2bhvuva");
     Widget w4 = new Widget("456","Widget 4");
     w4.setTopicId("q8LrdYvcEqi5CeDO");
     w4.setType("PARAGRAPH");
@@ -38,6 +41,16 @@ public class WidgetService {
 
     widgetList.add(widget);
     return widget;
+  }
+
+  public int updateWidget(String wid, Widget updateWidget){
+    for(int i=0; i<widgetList.size();i++){
+      if(widgetList.get(i).getId().equals(wid)){
+        widgetList.set(i, updateWidget);
+        return 1;
+      }
+    }
+    return 0;
   }
 
   public int deleteWidget(String wid) {
