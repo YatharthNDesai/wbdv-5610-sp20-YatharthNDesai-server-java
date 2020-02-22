@@ -2,6 +2,10 @@ package com.example.wbdvsp20YatharthDesaiserverjava.controllers;
 
 import com.example.wbdvsp20YatharthDesaiserverjava.models.Widget;
 import com.example.wbdvsp20YatharthDesaiserverjava.services.WidgetService;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,7 +16,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import javax.xml.crypto.Data;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -23,6 +31,7 @@ public class WidgetController {
   @PostMapping("/api/topics/{tid}/widgets")
   public Widget createWidget(@PathVariable("tid") String topicId,
                              @RequestBody Widget widget){
+    System.out.print(widget.getTitle());
     widget.setTopicId(topicId);
     return service.createWidget(widget);
   }
@@ -34,12 +43,22 @@ public class WidgetController {
     return service.updateWidget(wid,updateWidget);
   }
 
-  @PutMapping("/api/topics/{tid}/widgets")
-  public int updateAll(@PathVariable("tid") String tid,
-                          @RequestBody List<Widget> updateList){
-
-    return service.updateAll(tid,updateList);
-  }
+//  @PutMapping("/api/topics/{tid}/widgets")
+//  public int updateAll(@PathVariable("tid") String tid,
+//                       @RequestBody List<Widget> updateList(Data)) {
+//
+//    System.out.print(updateList);
+//List<Widget> newList = new ArrayList<>();
+////    ObjectMapper objectMapper = new ObjectMapper();
+////
+////    List<Widget> updateList = objectMapper.readValue(clientList, new TypeReference<List<Widget>>(){});
+////    for(Widget widget: clientList){
+////      updateList.add(widget);
+////    }
+////    System.out.println("List is " + updateList);
+////
+//    return service.updateAll(tid,newList);
+//  }
 
   @DeleteMapping("/api/widgets/{widgetId}")
   public int deleteWidget(@PathVariable("widgetId") String wid) {

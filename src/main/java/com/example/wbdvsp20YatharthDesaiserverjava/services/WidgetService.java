@@ -39,7 +39,7 @@ public class WidgetService {
 
 
   public Widget createWidget(Widget widget) {
-    widget.setOrder(widgetList.size());
+//    widget.setOrder(widgetList.size());
     widgetList.add(widget);
     return widget;
   }
