@@ -43,22 +43,11 @@ public class WidgetController {
     return service.updateWidget(wid,updateWidget);
   }
 
-//  @PutMapping("/api/topics/{tid}/widgets")
-//  public int updateAll(@PathVariable("tid") String tid,
-//                       @RequestBody List<Widget> updateList(Data)) {
-//
-//    System.out.print(updateList);
-//List<Widget> newList = new ArrayList<>();
-////    ObjectMapper objectMapper = new ObjectMapper();
-////
-////    List<Widget> updateList = objectMapper.readValue(clientList, new TypeReference<List<Widget>>(){});
-////    for(Widget widget: clientList){
-////      updateList.add(widget);
-////    }
-////    System.out.println("List is " + updateList);
-////
-//    return service.updateAll(tid,newList);
-//  }
+  @PutMapping("/api/topics/{tid}/widgets")
+  public int updateAll(@PathVariable("tid") String tid,
+                       @RequestBody List<Widget> updateList) {
+    return service.updateAll(tid,updateList);
+  }
 
   @DeleteMapping("/api/widgets/{widgetId}")
   public int deleteWidget(@PathVariable("widgetId") String wid) {
