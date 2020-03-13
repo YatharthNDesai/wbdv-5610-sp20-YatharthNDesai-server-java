@@ -1,13 +1,30 @@
 package com.example.wbdvsp20YatharthDesaiserverjava.models;
 
-public class Widget
-{
-  private String id;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "widgets")
+public class Widget {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
   private String title;
-  private String topicId;
   private String type = "HEADING";
   private int size = 2;
   private String paragraph;
+
+  @ManyToOne
+  @JsonIgnore
+  private Topic topic;
 
 //  public Integer getOrder() {
 //    return order;
@@ -16,6 +33,14 @@ public class Widget
 //  public void setOrder(int order) {
 //    this.order = order;
 //  }
+
+  public Topic getTopic() {
+    return topic;
+  }
+
+  public void setTopic(Topic topic) {
+    this.topic = topic;
+  }
 
   public String getParagraph() {
     return paragraph;
@@ -41,27 +66,19 @@ public class Widget
     this.type = type;
   }
 
-  public String getTopicId() {
-    return topicId;
-  }
-
-  public void setTopicId(String topicId) {
-    this.topicId = topicId;
-  }
-
   public Widget() {
   }
 
-  public Widget(String id, String title) {
+  public Widget(Integer id, String title) {
     this.id = id;
     this.title = title;
   }
 
-  public String getId() {
+  public Integer getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(Integer id) {
     this.id = id;
   }
 

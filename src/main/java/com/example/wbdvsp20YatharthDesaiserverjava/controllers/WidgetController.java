@@ -2,11 +2,8 @@ package com.example.wbdvsp20YatharthDesaiserverjava.controllers;
 
 import com.example.wbdvsp20YatharthDesaiserverjava.models.Widget;
 import com.example.wbdvsp20YatharthDesaiserverjava.services.WidgetService;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,25 +13,29 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-import javax.xml.crypto.Data;
 
 @RestController
 @CrossOrigin(origins = "*")
 public class WidgetController {
 
-  WidgetService service = new WidgetService();
+@Autowired
+  WidgetService service;
 
   @PostMapping("/api/topics/{tid}/widgets")
-  public Widget createWidget(@PathVariable("tid") String topicId,
+  public Widget createWidget(@PathVariable("tid") Integer topicId,
                              @RequestBody Widget widget){
-    System.out.print(widget.getTitle());
-    widget.setTopicId(topicId);
-    return service.createWidget(widget);
+
+    return service.createWidget(topicId,widget);
   }
+//
+//  @GetMapping("/api//widgets/create")
+//  public Widget createWidgetTest(){
+//    Widget w1 = new Widget();
+//    w1.setTitle("New Widget");
+//    w1.setSize(4);
+//    return service.createWidget(w1);
+//  }
 
   @PutMapping("/api/widgets/{widgetId}")
   public int updateWidget(@PathVariable("widgetId") String wid,
@@ -49,8 +50,13 @@ public class WidgetController {
     return service.updateAll(tid,updateList);
   }
 
+  @GetMapping("/api/delete/widgets/{widgetId}")
+  public int deleteWidgetTest(@PathVariable("widgetId") Integer wid) {
+    return service.deleteWidget(wid);
+  }
+
   @DeleteMapping("/api/widgets/{widgetId}")
-  public int deleteWidget(@PathVariable("widgetId") String wid) {
+  public int deleteWidget(@PathVariable("widgetId") Integer wid) {
     return service.deleteWidget(wid);
   }
 
@@ -60,22 +66,12 @@ public class WidgetController {
   }
 
   @GetMapping("/api/widgets/{widgetId}")
-  public Widget findWidgetById(@PathVariable("widgetId") String wid) {
+  public Widget findWidgetById(@PathVariable("widgetId") Integer wid) {
     return service.findWidgetById(wid);
   }
 
   @GetMapping("/api/topics/{tid}/widgets")
-  public List<Widget> findWidgetsForTopic(@PathVariable("tid") String topicId){
+  public List<Widget> findWidgetsForTopic(@PathVariable("tid") Integer topicId){
     return service.findWidgetsForTopic(topicId);
-  }
-
-  @GetMapping("/api/widget")
-  public Widget getWidget(){
-    return service.getWidget();
-  }
-
-  @GetMapping("/hello")
-  public String sayHello() {
-    return "Hello World!";
   }
 }
