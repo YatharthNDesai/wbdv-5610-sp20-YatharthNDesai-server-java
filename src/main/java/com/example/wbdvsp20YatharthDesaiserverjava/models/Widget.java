@@ -21,6 +21,25 @@ public class Widget {
   private String type = "HEADING";
   private int size = 2;
   private String paragraph;
+  private String url;
+
+  public String getList() {
+    return list;
+  }
+
+  public void setList(String list) {
+    this.list = list;
+  }
+
+  private String list = "Unordered List";
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
 
   @ManyToOne
   @JsonIgnore
