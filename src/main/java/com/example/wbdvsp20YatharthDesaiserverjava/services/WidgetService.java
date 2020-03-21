@@ -29,17 +29,26 @@ public class WidgetService {
   }
 
   public int updateAll(String tid, List<Widget> updateList) {
+    System.out.println("Update all called");
     int k = 0;
-//    for (int i = 0; i < widgetList.size(); i++) {
-//
-//      if (widgetList.get(i).getTopicId().equals(tid)) {
-//        widgetList.set(i, updateList.get(k));
-//        k++;
-//      }
-//    }
+    List<Widget> widgetList = (List<Widget>) widgetRepository.findAll();
+    for (Widget widget : widgetList) {
+
+      if (widget.getTopic().getId().equals(tid)) {
+        widget = updateList.get(k);
+        widget.setTopic(updateList.get(k).getTopic());
+        widgetRepository.save(widget);
+        k++;
+      }
+    }
     return 0;
   }
-  public int updateWidget(String wid, Widget updateWidget) {
+  public int updateWidget(Integer wid, Widget updateWidget) {
+
+//    Widget widgetToUpdate = widgetRepository.findById(wid).get();
+//    widgetToUpdate = updateWidget;
+    updateWidget.setTopic(widgetRepository.findById(wid).get().getTopic());
+    widgetRepository.save(updateWidget);
 //
 
     return 0;
