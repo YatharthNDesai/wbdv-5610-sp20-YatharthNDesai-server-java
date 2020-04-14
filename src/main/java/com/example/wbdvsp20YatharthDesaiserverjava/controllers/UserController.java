@@ -6,10 +6,11 @@ import com.example.wbdvsp20YatharthDesaiserverjava.repositories.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.servlet.http.HttpSession;
 
 @RestController
@@ -29,6 +30,13 @@ public class UserController {
     session.setAttribute("profile", profile);
     return profile;
   }
+
+  @PutMapping("/update")
+  public User updateUser(HttpSession session,
+                          @RequestBody User updateUser){
+    return repository.save(updateUser);
+  }
+
 
   @PostMapping("/register")
   public User register(HttpSession session,
